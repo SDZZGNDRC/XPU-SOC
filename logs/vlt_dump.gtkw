@@ -1,19 +1,19 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Wed Sep  7 02:53:56 2022
+[*] Wed Sep  7 10:58:30 2022
 [*]
 [dumpfile] "/home/sdzz/project/XPU-SOC/logs/vlt_dump.vcd"
-[dumpfile_mtime] "Wed Sep  7 02:51:33 2022"
-[dumpfile_size] 242459825
+[dumpfile_mtime] "Wed Sep  7 10:50:25 2022"
+[dumpfile_size] 397125760
 [savefile] "/home/sdzz/project/XPU-SOC/logs/vlt_dump.gtkw"
-[timestart] 124000
+[timestart] 1330940
 [size] 1920 1016
 [pos] -1 -1
-*-13.000000 299690 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-13.000000 1038320 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.top.
 [sst_width] 304
-[signals_width] 359
+[signals_width] 396
 [sst_expanded] 1
 [sst_vpaned_height] 289
 @28
@@ -27,13 +27,14 @@ TOP.top.uart_busy
 -=================UartT
 @28
 TOP.top.uart0.clk
-@25
+@24
 TOP.top.uart0.pre_state[3:0]
 TOP.top.uart0.next_state[3:0]
 @28
 TOP.top.uart0.en_i
 @22
 TOP.top.uart0.data_i[7:0]
+@28
 TOP.top.uart0.data[7:0]
 @24
 TOP.top.uart0.baud_counter[15:0]
@@ -42,5 +43,15 @@ TOP.top.uart0.baud_counter_next[15:0]
 TOP.top.uart0.event_send_flag
 TOP.top.uart0.Tx_o
 TOP.top.uart0.busy_o
+@200
+-=================UartR
+@28
+TOP.top.uart1.clk
+TOP.top.uart1.rst
+TOP.top.uart1.rs232_rx
+TOP.top.uart1.bps_en
+TOP.top.uart1.bps_clk
+@23
+TOP.top.uart1.rx_data[7:0]
 [pattern_trace] 1
 [pattern_trace] 0

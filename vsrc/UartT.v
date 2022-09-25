@@ -11,7 +11,7 @@ module UartT (
 
 /*     parameter   CLK_FREQ 	 = 50000000;				
     parameter   BAUD_RATE 	 = 9600; */
-    parameter   BAUD_CNT_MAX = 16'd5208;
+    parameter   BAUD_CNT_MAX = 16'd5208 + 16'd1;
 
 /* data */
     wire[7:0] data;

@@ -3,7 +3,8 @@ module top(
 	input clk,
 	input rst, 
 
-    output wire Tx_o
+    output wire Tx_o, 
+    output wire[7:0] data_o
 );
     wire uart_busy;
     wire[7:0] send_data_next;
@@ -20,6 +21,23 @@ module top(
 
         .busy_o(uart_busy),
         .Tx_o(Tx_o)
+    );
+    wire bps_en_rx;
+    wire bps_clk_rx;
+    UartR1 uart1(
+        .clk(clk),
+        .rst(rst),
+        .bps_en(bps_en_rx),
+        .bps_clk(bps_clk_rx),
+        .rs232_rx(Tx_o),
+        .rx_data(data_o)
+    );
+
+    Baud #(.BPS_PARA(5208)) baud0(
+        .clk_in(clk),
+        .rst_n_in(~rst), 
+        .bps_en(bps_en_rx), 
+        .bps_clk(bps_clk_rx)
     );
 
 /* The following code only for simulating */
